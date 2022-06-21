@@ -1,0 +1,79 @@
+:root{
+    background-color: var(--color-background);
+}
+
+body{
+    display: grid;
+    max-width: 60em;
+    margin-inline: auto;
+
+    grid-template: 
+        "header header" auto
+        "nav related" auto
+        "news related" auto
+        "footer footer" auto
+        / auto 20%;
+}
+
+body > header{
+    grid-area: header;
+    position: relative;
+
+    display: grid;
+    grid-template: 
+        "title signup" auto
+        "subtitle signup" auto
+        / auto auto;
+}
+
+body > header > h1{
+    grid-area: title;
+}
+body > header > h2{
+    grid-area: subtitle;
+}
+#signup{
+    grid-area: signup;
+    align-self: end;
+    justify-self: right;
+}
+
+/*menu*/
+
+nav{
+    grid-area: nav;
+}
+nav ul{
+    display: flex;
+    flex-direction: row;
+}
+nav ul > *{
+    flex: auto;
+}
+
+/*related*/
+
+#related{
+    grid-area: related;
+}
+
+/*news*/
+#news{
+    grid-area: news;
+}
+
+#news footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.author {
+    flex: 1;
+}
+
+/*footer*/
+body>footer{
+    grid-area:footer;
+}

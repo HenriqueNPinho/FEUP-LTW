@@ -1,0 +1,93 @@
+/*comments*/
+#comments {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.comment p{
+    background-color: rgba(220, 220, 220, 1.0);;
+}
+.comment .user::after {
+    content: " said:";
+}
+
+.comment .date {
+ float: right;
+ padding-right: 10px;  
+}
+
+.comment p::before{  
+        content: "\201C";
+        font: 3em serif;
+        opacity: 0.2;
+        margin-bottom: 0;
+}
+
+
+/*form*/
+#news > article >section{
+    display: block;
+}
+#news > article > section > form{
+    display: grid; 
+    grid-template-columns: 1fr 1fr;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 20px;
+    row-gap: 15px;
+    column-gap: 10px;
+    background-color: rgba(220, 220, 220, 1.0);
+}
+
+#news > article > section > form > h2{
+    grid-column: 1/2;
+    font-size: 18px;
+}
+
+#news > article > section> form label{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    column-gap: 10px;
+}
+
+#news  > article > section> form > label:nth-of-type(1) {
+    grid-column: 1/ 2;
+}
+
+#news  > article > section> form > label:nth-of-type(2) {
+    grid-column: 2/ 2;
+}
+
+#news  > article > section> form > label:nth-of-type(3){
+    grid-column: span 2;
+
+}
+
+#news  > article > section> form > button{
+    grid-column: 2/2;
+    background-color: black;
+    color: white;
+    height: 40px;
+    width: 150px;
+    margin-bottom: 10px;
+    justify-self: right;
+    display: inline-block;
+}
+#news >article > section> form > label input[type=text]{
+    border: 2px solid black;
+    border-radius: 4px;
+    width: auto;
+    height: 30px;
+}
+#news >article > section> form > label input[type=email]{
+    border: 2px solid black;
+    border-radius: 4px;
+    width: auto;
+    height: 30px;
+}
+
+#news >article > section> form > label textarea{
+    height: 100px;
+    border: 2px solid gray;
+    border-radius: 4px;
+}

@@ -1,0 +1,18 @@
+body{
+    display: grid;
+    grid-template:
+"header header" auto
+"nav nav" auto
+"reg reg" auto
+"footer footer" auto
+/auto auto;
+}
+
+#related{
+    display: none;
+    grid-area:none;
+}
+
+#register{
+    grid-area: reg;
+}
